@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
+import Characters from '../assets/colourful.jpg';
 
-const Login = ({socket}) => {
+
+
+const Login = ({setUname, socket}) => {
     const [username, setUsername] = useState('');
     const navigate = useNavigate();
 
@@ -11,13 +14,21 @@ const Login = ({socket}) => {
         // Handle login logic here
         console.log('Username:', username);
 
-        console.log(socket);
-        navigate('/');
+        setUname(username);
+        navigate('/Memory');
     };
 
     return (
+        <>
+        <style jsx global>{`
+            body { background: radial-gradient(circle, #0776aa, #032045);
+        }
+        `}</style>
         <div className="login-container">
             <Header />
+
+            {/* <img src={Characters} alt="Characters" style={{ height: '75vh', paddingLeft: '160px' , paddingTop:'30px', float: 'left'}} /> */}
+
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
@@ -33,6 +44,7 @@ const Login = ({socket}) => {
                 <button type="submit">Login</button>
             </form>
         </div>
+        </>
     );
 };
 
