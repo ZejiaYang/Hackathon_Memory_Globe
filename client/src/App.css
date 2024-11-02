@@ -1,6 +1,9 @@
 .App {
   /*text-align: center;*/
   background: radial-gradient(circle , #0776aa, #03122c);
+  text-align: center;
+ 
+ /* background: radial-gradient(circle , #0776aa, #03122c); */
   min-height: 100vh;
 }
 
