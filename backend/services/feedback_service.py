@@ -1,4 +1,4 @@
-from utils.prompts import run_prompts
+from ..utils.prompts import run_prompts
 
 class FeedbackService:
     def __init__(self) -> None:
