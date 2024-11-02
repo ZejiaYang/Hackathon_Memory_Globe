@@ -20,7 +20,7 @@ function App() {
           {/* Define routes for different pages */}
         <Route path="/" element={<Screensaver />} />
         <Route path="/login" element={<Login setUname={setUsername} socket={socket}/>} />
-        <Route path="/memory" element={<Memory socket={socket} />} />
+        <Route path="/memory" element={<Memory socket={socket} username={username}/>} />
         </Routes>
  
       </div>

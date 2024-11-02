@@ -7,8 +7,6 @@ const Memory = ({username, socket}) => {
     const [memory, setMemory] = useState('');
 
     const [elements, setElements] = useState([]);
-
-    const navigate = useNavigate();
     
 
     const handleSubmit = (e) => {
