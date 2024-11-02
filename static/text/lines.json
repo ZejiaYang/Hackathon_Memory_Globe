@@ -1,0 +1,45 @@
+{
+    "characters": [
+      {
+        "name": "Joy",
+        "lines": [
+          "Joy line 1.",
+          "Joy line 2.",
+          "Joy line 3."
+        ]
+      },
+      {
+        "name": "Sadness",
+        "lines": [
+          "Sadness line 1.",
+          "Sadness line 2.",
+          "Sadness line 3."
+        ]
+      },
+      {
+        "name": "Anger",
+        "lines": [
+          "Anger line 1.",
+          "Anger line 2.",
+          "Anger line 3."
+        ]
+      },
+      {
+        "name": "Fear",
+        "lines": [
+          "Fear line 1.",
+          "Fear line 2.",
+          "Fear line 3."
+        ]
+      },
+      {
+        "name": "Disgust",
+        "lines": [
+          "Disgust line 1.",
+          "Disgust line 2.",
+          "Disgust line 3."
+        ]
+      }
+    ]
+  }
+  

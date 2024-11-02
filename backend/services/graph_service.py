@@ -1,4 +1,4 @@
-from database.neo4j_connection import Neo4jConnection
+from ..database.neo4j_connection import Neo4jConnection
 
 class GraphService:
     def __init__(self, neo4j_conn):
@@ -12,3 +12,4 @@ class GraphService:
 
     def get_graph_data(self):
         return self.neo4j_conn.get_graph_data()
+
