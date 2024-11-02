@@ -1,16 +1,6 @@
 {
   "dependencies": {
-<<<<<<< HEAD
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "jade": "~1.11.0",
-    "mongoose": "^8.8.0",
-    "morgan": "~1.9.1"
-=======
     "express": "^4.21.1",
     "socket.io": "^4.8.1"
->>>>>>> b2fc9d215a4a3a2d2bda06d539788aab947e3220
   }
 }

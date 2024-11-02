@@ -1,0 +1,724 @@
+[
+  {
+    "text": "I swam in the clear blue lake and watched the ducks glide by.",
+    "keywords": {
+      "noun": [
+        "lake",
+        "ducks"
+      ],
+      "adjective": [
+        "clear",
+        "blue"
+      ],
+      "verb": [
+        "swam",
+        "watched",
+        "glide"
+      ]
+    },
+    "emotion_scores": [
+      0.7,
+      0.0,
+      0.0,
+      0.1,
+      0.0
+    ],
+    "timestamp": "2024-11-01T10:00:00Z"
+  },
+  {
+    "text": "I hiked up the trail and noticed the vibrant colors of the leaves.",
+    "keywords": {
+      "noun": [
+        "trail",
+        "colors",
+        "leaves"
+      ],
+      "adjective": [
+        "vibrant"
+      ],
+      "verb": [
+        "hiked",
+        "noticed"
+      ]
+    },
+    "emotion_scores": [
+      0.6,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-11-01T12:00:00Z"
+  },
+  {
+    "text": "I finished reading a novel about a journey through the mountains.",
+    "keywords": {
+      "noun": [
+        "novel",
+        "journey",
+        "mountains"
+      ],
+      "adjective": [],
+      "verb": [
+        "finished",
+        "reading"
+      ]
+    },
+    "emotion_scores": [
+      0.5,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-11-01T14:00:00Z"
+  },
+  {
+    "text": "I listened to a new album while cooking dinner and tried out a new recipe.",
+    "keywords": {
+      "noun": [
+        "album",
+        "dinner",
+        "recipe"
+      ],
+      "adjective": [
+        "new"
+      ],
+      "verb": [
+        "listened",
+        "cooking",
+        "tried"
+      ]
+    },
+    "emotion_scores": [
+      0.8,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-11-01T16:00:00Z"
+  },
+  {
+    "text": "I walked in the park and observed the children playing on the swings.",
+    "keywords": {
+      "noun": [
+        "park",
+        "children",
+        "swings"
+      ],
+      "adjective": [],
+      "verb": [
+        "walked",
+        "observed",
+        "playing"
+      ]
+    },
+    "emotion_scores": [
+      0.6,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-11-01T18:00:00Z"
+  },
+  {
+    "text": "I saw a storm approaching while sitting on the balcony.",
+    "keywords": {
+      "noun": [
+        "storm",
+        "balcony"
+      ],
+      "adjective": [],
+      "verb": [
+        "saw",
+        "sitting",
+        "approaching"
+      ]
+    },
+    "emotion_scores": [
+      0.3,
+      0.0,
+      0.1,
+      0.2,
+      0.2
+    ],
+    "timestamp": "2024-11-01T20:00:00Z"
+  },
+  {
+    "text": "I noticed the sun setting over the horizon while hiking.",
+    "keywords": {
+      "noun": [
+        "sun",
+        "horizon"
+      ],
+      "adjective": [
+        "setting"
+      ],
+      "verb": [
+        "noticed",
+        "hiking"
+      ]
+    },
+    "emotion_scores": [
+      0.7,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-11-02T08:00:00Z"
+  },
+  {
+    "text": "I watched the clouds gather before the rain started falling.",
+    "keywords": {
+      "noun": [
+        "clouds",
+        "rain"
+      ],
+      "adjective": [],
+      "verb": [
+        "watched",
+        "gather",
+        "falling"
+      ]
+    },
+    "emotion_scores": [
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.3
+    ],
+    "timestamp": "2024-11-02T10:00:00Z"
+  },
+  {
+    "text": "I experienced a moment of calmness while sitting by the water.",
+    "keywords": {
+      "noun": [
+        "calmness",
+        "water"
+      ],
+      "adjective": [],
+      "verb": [
+        "experienced",
+        "sitting"
+      ]
+    },
+    "emotion_scores": [
+      0.8,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-11-02T12:00:00Z"
+  },
+  {
+    "text": "I felt uneasy during the thunderstorm that shook the windows.",
+    "keywords": {
+      "noun": [
+        "thunderstorm",
+        "windows"
+      ],
+      "adjective": [],
+      "verb": [
+        "felt",
+        "shook"
+      ]
+    },
+    "emotion_scores": [
+      0.1,
+      0.0,
+      0.2,
+      0.0,
+      0.5
+    ],
+    "timestamp": "2024-11-02T14:00:00Z"
+  },
+  {
+    "text": "I found joy in the laughter of friends at dinner.",
+    "keywords": {
+      "noun": [
+        "joy",
+        "laughter",
+        "friends",
+        "dinner"
+      ],
+      "adjective": [],
+      "verb": [
+        "found"
+      ]
+    },
+    "emotion_scores": [
+      0.9,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-11-02T16:00:00Z"
+  },
+  {
+    "text": "I walked through the market and saw fresh produce everywhere.",
+    "keywords": {
+      "noun": [
+        "market",
+        "produce"
+      ],
+      "adjective": [
+        "fresh"
+      ],
+      "verb": [
+        "walked",
+        "saw"
+      ]
+    },
+    "emotion_scores": [
+      0.7,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-11-02T18:00:00Z"
+  },
+  {
+    "text": "I observed the art exhibit and appreciated the creativity on display.",
+    "keywords": {
+      "noun": [
+        "art",
+        "exhibit",
+        "creativity"
+      ],
+      "adjective": [],
+      "verb": [
+        "observed",
+        "appreciated"
+      ]
+    },
+    "emotion_scores": [
+      0.8,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-11-02T20:00:00Z"
+  },
+  {
+    "text": "I felt a twinge of disappointment when the event was canceled.",
+    "keywords": {
+      "noun": [
+        "disappointment",
+        "event"
+      ],
+      "adjective": [],
+      "verb": [
+        "felt",
+        "canceled"
+      ]
+    },
+    "emotion_scores": [
+      0.2,
+      0.5,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-11-02T22:00:00Z"
+  },
+  {
+    "text": "I was intrigued by the stories shared during our discussion.",
+    "keywords": {
+      "noun": [
+        "stories",
+        "discussion"
+      ],
+      "adjective": [],
+      "verb": [
+        "was",
+        "shared",
+        "intrigued"
+      ]
+    },
+    "emotion_scores": [
+      0.6,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-11-03T08:00:00Z"
+  },
+  {
+    "text": "I noticed the city lights twinkling as evening set in.",
+    "keywords": {
+      "noun": [
+        "city",
+        "lights",
+        "evening"
+      ],
+      "adjective": [
+        "twinkling"
+      ],
+      "verb": [
+        "noticed",
+        "set"
+      ]
+    },
+    "emotion_scores": [
+      0.7,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-11-03T10:00:00Z"
+  },
+  {
+    "text": "I saw people dancing and enjoying themselves at the festival.",
+    "keywords": {
+      "noun": [
+        "people",
+        "dancing",
+        "festival"
+      ],
+      "adjective": [],
+      "verb": [
+        "saw",
+        "enjoying"
+      ]
+    },
+    "emotion_scores": [
+      0.8,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-11-03T12:00:00Z"
+  },
+  {
+    "text": "I studied hard for the math exam, but when I saw my grade, I felt a heavy weight in my chest. I had put in so much effort, yet it didn't pay off.",
+    "keywords": {
+      "noun": [
+        "exam",
+        "grade",
+        "effort"
+      ],
+      "adjective": [
+        "hard",
+        "heavy"
+      ],
+      "verb": [
+        "studied",
+        "saw",
+        "felt"
+      ]
+    },
+    "emotion_scores": [
+      0.1,
+      0.8,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-10-30T09:00:00Z"
+  },
+  {
+    "text": "When I moved to the new city, everything felt unfamiliar. I missed my old friends and the comfort of home.",
+    "keywords": {
+      "noun": [
+        "city",
+        "friends",
+        "home"
+      ],
+      "adjective": [
+        "new",
+        "unfamiliar"
+      ],
+      "verb": [
+        "moved",
+        "missed"
+      ]
+    },
+    "emotion_scores": [
+      0.2,
+      0.7,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-10-31T11:30:00Z"
+  },
+  {
+    "text": "I was playing soccer with friends when a ball hit me unexpectedly, and I felt embarrassed in front of everyone.",
+    "keywords": {
+      "noun": [
+        "soccer",
+        "ball",
+        "friends"
+      ],
+      "adjective": [
+        "unexpected"
+      ],
+      "verb": [
+        "playing",
+        "hit",
+        "felt"
+      ]
+    },
+    "emotion_scores": [
+      0.0,
+      0.5,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-11-01T14:00:00Z"
+  },
+  {
+    "text": "I had a fun evening with friends, but at the end, I felt a little lonely as everyone went home.",
+    "keywords": {
+      "noun": [
+        "evening",
+        "friends"
+      ],
+      "adjective": [
+        "fun",
+        "lonely"
+      ],
+      "verb": [
+        "had",
+        "went"
+      ]
+    },
+    "emotion_scores": [
+      0.3,
+      0.4,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-11-01T20:30:00Z"
+  },
+  {
+    "text": "I was teased by others for my interests, and it made me feel frustrated and upset.",
+    "keywords": {
+      "noun": [
+        "interests"
+      ],
+      "adjective": [
+        "frustrated",
+        "upset"
+      ],
+      "verb": [
+        "teased",
+        "made"
+      ]
+    },
+    "emotion_scores": [
+      0.0,
+      0.5,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-11-01T09:30:00Z"
+  },
+  {
+    "text": "Eating broccoli at dinner again made me angry. I really dislike that vegetable.",
+    "keywords": {
+      "noun": [
+        "broccoli",
+        "dinner"
+      ],
+      "adjective": [
+        "angry",
+        "dislike"
+      ],
+      "verb": [
+        "eating",
+        "made"
+      ]
+    },
+    "emotion_scores": [
+      0.0,
+      0.7,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-11-01T18:00:00Z"
+  },
+  {
+    "text": "I walked past an irritating scene where people were arguing, and it just got on my nerves.",
+    "keywords": {
+      "noun": [
+        "scene",
+        "people"
+      ],
+      "adjective": [
+        "irritating"
+      ],
+      "verb": [
+        "walked",
+        "arguing"
+      ]
+    },
+    "emotion_scores": [
+      0.0,
+      0.6,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "timestamp": "2024-11-01T16:00:00Z"
+  },
+  {
+    "text": "I feel disgusted when I see bad smells in the kitchen after cooking.",
+    "keywords": {
+      "noun": [
+        "smells",
+        "kitchen"
+      ],
+      "adjective": [
+        "bad"
+      ],
+      "verb": [
+        "see",
+        "cooking"
+      ]
+    },
+    "emotion_scores": [
+      0.0,
+      0.0,
+      0.0,
+      0.8,
+      0.0
+    ],
+    "timestamp": "2024-11-02T12:00:00Z"
+  },
+  {
+    "text": "I hate wearing my old clothes; they just don't feel right anymore.",
+    "keywords": {
+      "noun": [
+        "clothes"
+      ],
+      "adjective": [
+        "old",
+        "right"
+      ],
+      "verb": [
+        "hate",
+        "wearing"
+      ]
+    },
+    "emotion_scores": [
+      0.0,
+      0.0,
+      0.0,
+      0.7,
+      0.0
+    ],
+    "timestamp": "2024-11-02T15:00:00Z"
+  },
+  {
+    "text": "I felt scared on the roller coaster as it went up and down rapidly.",
+    "keywords": {
+      "noun": [
+        "roller coaster"
+      ],
+      "adjective": [
+        "scared",
+        "rapid"
+      ],
+      "verb": [
+        "felt",
+        "went"
+      ]
+    },
+    "emotion_scores": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.9
+    ],
+    "timestamp": "2024-11-02T10:00:00Z"
+  },
+  {
+    "text": "I get anxious before exams, always worrying about how I'll perform.",
+    "keywords": {
+      "noun": [
+        "exams"
+      ],
+      "adjective": [
+        "anxious"
+      ],
+      "verb": [
+        "get",
+        "worrying"
+      ]
+    },
+    "emotion_scores": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.8
+    ],
+    "timestamp": "2024-11-02T11:00:00Z"
+  },
+  {
+    "text": "The pressure of finding an internship makes me feel overwhelmed.",
+    "keywords": {
+      "noun": [
+        "pressure",
+        "internship"
+      ],
+      "adjective": [
+        "overwhelmed"
+      ],
+      "verb": [
+        "makes",
+        "finding"
+      ]
+    },
+    "emotion_scores": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.7
+    ],
+    "timestamp": "2024-11-02T14:00:00Z"
+  },
+  {
+    "text": "I feel fear when I meet difficulties in my projects; it makes me doubt myself.",
+    "keywords": {
+      "noun": [
+        "difficulties",
+        "projects"
+      ],
+      "adjective": [
+        "fear",
+        "self-doubt"
+      ],
+      "verb": [
+        "feel",
+        "makes"
+      ]
+    },
+    "emotion_scores": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.6
+    ],
+    "timestamp": "2024-11-02T13:00:00Z"
+  }
+]

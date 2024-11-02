@@ -1,6 +1,6 @@
 from utils.prompts import run_prompts
 
-class FiveCharacters:
+class FeedbackService:
     def __init__(self) -> None:
         self.characters = ['Joy', 'Sadness', 'Angry', 'Disgust', 'Fear']
         self.model = 'gpt-3.5-turbo'
