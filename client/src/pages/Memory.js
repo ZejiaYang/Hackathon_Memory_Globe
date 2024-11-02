@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Memory = () => {
+const Memory = ({socket}) => {
     return (
         <div>
             <h1>Memory Page</h1>
