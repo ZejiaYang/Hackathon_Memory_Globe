@@ -5,7 +5,7 @@ import Characters from '../assets/colourful.jpg';
 
 
 
-const Login = () => {
+const Login = ({setUname, socket}) => {
     const [username, setUsername] = useState('');
     const navigate = useNavigate();
 
@@ -13,6 +13,8 @@ const Login = () => {
         e.preventDefault();
         // Handle login logic here
         console.log('Username:', username);
+
+        setUname(username);
         navigate('/Memory');
     };
 

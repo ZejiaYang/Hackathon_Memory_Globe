@@ -1,19 +1,17 @@
-import axios from 'axios';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login.jsx';    // Import your Login component
 import Memory from './pages/Memory.jsx';  // Import your Memory component
 import Screensaver from './pages/Screensaver.jsx';  // Import your Screensaver component
 import { PageTransition } from '@steveeeie/react-page-transition';
+import { useState } from 'react';
 
-//data will be the string we send from our server
-const apiCall = () => {
-  axios.get('http://localhost:8080').then((data) => {
-    //this console.log will be in our frontend console
-    console.log(data)
-  })
-}
+
+import { io } from 'socket.io-client';
 
 function App() {
+
+  const socket = io('http://127.0.0.1:5000');
+  const [username, setUsername] = useState('');
 
   return (
     <Router>
