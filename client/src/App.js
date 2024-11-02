@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login.jsx';    // Import your Login component
 import Memory from './pages/Memory.jsx';  // Import your Memory component
 import Screensaver from './pages/Screensaver.jsx';  // Import your Screensaver component
-import { PageTransition } from '@steveeeie/react-page-transition';
 import { useState } from 'react';
 
 
@@ -20,8 +19,8 @@ function App() {
         <Routes>
           {/* Define routes for different pages */}
         <Route path="/" element={<Screensaver />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/memory" element={<Memory />} />
+        <Route path="/login" element={<Login setUname={setUsername} socket={socket}/>} />
+        <Route path="/memory" element={<Memory socket={socket} />} />
         </Routes>
  
       </div>
