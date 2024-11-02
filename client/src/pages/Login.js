@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 
-const Login = ({socket}) => {
+const Login = ({setUname, socket}) => {
     const [username, setUsername] = useState('');
     const navigate = useNavigate();
 
@@ -11,7 +11,7 @@ const Login = ({socket}) => {
         // Handle login logic here
         console.log('Username:', username);
 
-        console.log(socket);
+        setUname(username);
         navigate('/');
     };
 
