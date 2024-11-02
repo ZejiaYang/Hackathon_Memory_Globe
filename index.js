@@ -9,7 +9,18 @@ const io = new Server(server);
   res.sendFile(__dirname + '/index.html');
 });*/
 
-app.use(express.static('public/'));
+const cors = require('cors');
+
+// Enable CORS for your React app only
+app.use(cors({
+  origin: 'http://localhost:3001' // Allow requests from this origin
+}));
+
+app.get('/', (req, res) => {
+      res.send('Hello from our server!')
+})
+
+app.use(express.static('client/'));
 
 io.on('connection', (socket) => {
     socket.on('chat message', (msg) => {
@@ -17,6 +28,6 @@ io.on('connection', (socket) => {
     });
   });
 
-server.listen(3000, () => {
-  console.log('listening on *:3000');
+server.listen(8080, () => {
+  console.log('listening on *:8080');
 });
