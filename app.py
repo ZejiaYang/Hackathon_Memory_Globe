@@ -6,7 +6,7 @@ import datetime
 
 app = Flask(__name__)
 CORS(app)
-socketio = SocketIO(app, cors_allowed_origins='*')
+socketio = SocketIO(app, cors_allowed_origins='http://127.0.0.1')
 
 @socketio.on('memory submit')
 def handle_message(timestamp, username, memory):
@@ -14,7 +14,6 @@ def handle_message(timestamp, username, memory):
     dt = datetime.datetime.fromtimestamp(tstamp)
     
     print("at " + dt.strftime('%Y-%m-%d %H:%M:%S') + " " + username + " gained memory '"+memory + "'")
-
 
     # process_memory -> emotions = Dict[str, float], neighbours = Dict[neighbour_id = str, weight = float]
 

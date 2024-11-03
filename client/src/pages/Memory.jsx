@@ -26,10 +26,19 @@ const Memory = ({ username, socket }) => {
         }]);
 
         console.log("Submitting memory: %s", memory);
-        socket.emit("memory submit", Date.now(), username, memory);
+        console.log(socket.emit("memory submit", Date.now(), username, memory));
     };
 
     useEffect(() => {
+
+        socket.on('emotion response', (emotion, neighbour_ids, neighbour_history) => {
+            console.log("Emotion:");
+            console.log(emotion);
+            console.log("Neighbour ids:")
+            console.log(neighbour_ids);
+            console.log("Neighbour history:")
+            console.log(neighbour_history)
+        });
 
         for (var i = 0; i < 100; i++) {
             elements.push({

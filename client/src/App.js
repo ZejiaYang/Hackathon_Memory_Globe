@@ -9,7 +9,7 @@ import { io } from 'socket.io-client';
 
 function App() {
 
-  const socket = io('http://127.0.0.1:5000');
+  const socket = io('http://10.255.250.109:5001');
   const [username, setUsername] = useState('');
 
   return (
