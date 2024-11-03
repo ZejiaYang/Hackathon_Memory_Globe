@@ -34,9 +34,11 @@ emotion_to_category = {
 
 if __name__ == '__main__':
     service = MemoryService()
-    current_situation = "I went for hiking and breathed in fresh air"
-    emotion, previous_id = service.process_memory(current_situation, 198888)
+    current_situation = "I signed up for the hackathon"
+    emotion, previous_id = service.process_memory(current_situation, 200)
+    print(previous_id)
     previous_history = service.retrieve_memory(previous_id.keys())
+    print(previous_history)
     feedback = FeedbackService()
     feedback.get_feedback(current_situation, previous_history, emotion)
     

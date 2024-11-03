@@ -15,6 +15,7 @@ class MemoryService:
         message.compute_embedding()
         connections = self.compute_connections(message)
         neighbours = message.update_memory(connections, self.weight)
+        print(message.timestamp)
         self.add_memory(message)
         return message.emotions, neighbours
         
@@ -28,7 +29,7 @@ class MemoryService:
         for node in all_memory_nodes:
             other_embedding = pickle.loads(node['embedding'])
             similarity = self.cosine_similarity(node_embedding, other_embedding)
-            time_difference = (memory.timestamp- node['timestamp']) / (60 * 60 * 24)  # in days
+            time_difference = (memory.timestamp- node['timestamp']) / (10e3 * (60 * 60 * 24))  # in days
             freshness_score = max(0, 1 - time_difference / 30) 
             combined_score = (similarity * (1 - freshness_weight)) + (freshness_score * freshness_weight)
             if combined_score >= similarity_threshold:
