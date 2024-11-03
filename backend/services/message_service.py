@@ -14,7 +14,6 @@ class Message:
     def __init__(self, message, timestamp) -> None:
         self.raw_message = message
         self.timestamp = timestamp
-        self.emotions = {emo:0 for emo in emotions}
     
     def get_emomodel(self):
         tokenizer = AutoTokenizer.from_pretrained(emo_save_directory)
@@ -49,7 +48,7 @@ class Message:
         for (id, emotions, w) in connections:
             self.neighbours[str(id)] = w.item()
             for label, value in emotions.items():
-                self.emotions[label] = self.emotions[label] * (1 - weight) + weight * value * w
+                self.emotions[label] = self.emotions[label] * (1 - weight) + weight * value * w.item()
         return self.neighbours
 
     def get_memory_data(self):
