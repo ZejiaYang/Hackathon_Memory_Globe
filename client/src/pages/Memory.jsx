@@ -14,29 +14,51 @@ const Memory = ({ username, socket }) => {
 
     const [elements, setElements] = useState([]);
 
+    const [sp, setSp] = useState({});
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        var theta = Math.random() * 2 * Math.PI;
+
+        var r = Math.random() * 400;
+
         setElements(elements => [...elements, {
             data: {
-                id: 100,
+                id: elements.length+1,
                 label: 'node 100',
-                grad: "#FFFFFF #FFFFFF"
+                grad: "#FFFFFF #FFFFFF",
+            },
+            position: {
+                x: 375+r*Math.cos(theta),
+                y: 375+r*Math.sin(theta)
             }
         }]);
 
         console.log("Submitting memory: %s", memory);
-        socket.emit("memory submit", Date.now(), username, memory);
+        console.log(socket.emit("memory submit", Date.now(), username, memory));
     };
 
     useEffect(() => {
 
-        for (var i = 0; i < 100; i++) {
-            elements.push({
-                data: { source: Math.floor(Math.random() * 20), target: Math.floor(Math.random() * 20) }
-            });
-        }
+        socket.on('emotion response', (emotion, neighbour_ids, neighbour_history) => {
+            console.log("Emotion:");
+            console.log(emotion);
+            console.log("Neighbour ids:")
+            console.log(neighbour_ids);
+            console.log("Neighbour history:")
+            console.log(neighbour_history)
+        });
 
+        socket.on('character speech', (speech) => {
+            console.log("The characters say:");
+            console.log(speech);
+
+            setSp(speech);
+
+        })
+
+        /*
         for (var i = 0; i < 20; i++) {
             var r = Math.floor(Math.random() * 255);
             var g = Math.floor(Math.random() * 255);
@@ -50,6 +72,12 @@ const Memory = ({ username, socket }) => {
                 },
             })
         }
+
+        for (var i = 0; i < 100; i++) {
+            elements.push({
+                data: { source: Math.floor(Math.random() * 20), target: Math.floor(Math.random() * 20) }
+            });
+        }*/
     }, []);
 
     return (
@@ -63,30 +91,30 @@ const Memory = ({ username, socket }) => {
 
                 <div style={{ position: 'relative', height: '20vh', width: '50%', marginLeft: '50px' }}>
                     <img src={Joy} className="wobble" alt="Joy" style={{ position: 'absolute', height: '100%', left: '2%' }} />
-                    <span class='emotionspeech' style={{ position: 'absolute', width: '60%', textAlign: 'center', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', }}>I'm angry!!! And I will be even angrier if this text doesn't wrap!</span>
+                    <span id='Joy' class='emotionspeech' style={{ position: 'absolute', width: '60%', textAlign: 'center', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', }}>{sp['joy']}</span>
                 </div>
 
                 <div style={{ position: 'relative', height: '15vh', width: '50%', marginLeft: '50px', marginTop: '0px' }}>
                     <img src={Disgust} className="wobble" alt="Disgust" style={{ position: 'absolute', height: '100%', right: '2%' }} />
-                    <span class='emotionspeech' style={{ position: 'absolute', width: '60%', textAlign: 'center', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', }}>I'm angry!!! And I will be even angrier if this text doesn't wrap!</span>
+                    <span id='Disgust' class='emotionspeech' style={{ position: 'absolute', width: '60%', textAlign: 'center', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', }}>{sp['disgust']}</span>
                 </div>
 
                 <div style={{ position: 'relative', height: '15vh', width: '50%', marginLeft: '50px', marginTop: '0px' }}>
                     <img src={Sadness} className="wobble" alt="Sadness" style={{ position: 'absolute', height: '100%', left: '2%' }} />
-                    <span class='emotionspeech' style={{ position: 'absolute', width: '60%', textAlign: 'center', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', }}>I'm angry!!! And I will be even angrier if this text doesn't wrap!</span>
+                    <span id='Sadness' class='emotionspeech' style={{ position: 'absolute', width: '60%', textAlign: 'center', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', }}>{sp['sadness']}</span>
                 </div>
 
 
                 <div style={{ position: 'relative', height: '17vh', width: '50%', marginLeft: '50px', marginTop: '0px' }}>
                     <img src={Fear} className="wobble" alt="Fear" style={{ position: 'absolute', height: '100%', right: '2%' }} />
-                    <span class='emotionspeech' style={{ position: 'absolute', width: '60%', textAlign: 'center', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', }}>I'm angry!!! And I will be even angrier if this text doesn't wrap!</span>
+                    <span id='Fear' class='emotionspeech' style={{ position: 'absolute', width: '60%', textAlign: 'center', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', }}>{sp['fear']}</span>
 
                 </div>
 
 
                 <div style={{ position: 'relative', height: '10vh', width: '50%', marginLeft: '50px', marginTop: '10px' }}>
                     <img src={Anger} className="wobble" alt="Anger" style={{ position: 'absolute', height: '100%', left: '2%' }} />
-                    <span class='emotionspeech' style={{ position: 'absolute', width: '60%', textAlign: 'center', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', }}>I'm angry!!! And I will be even angrier if this text doesn't wrap!</span>
+                    <span class='emotionspeech' style={{ position: 'absolute', width: '60%', textAlign: 'center', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', }}>{sp['anger']}</span>
                 </div>
 
 
@@ -175,7 +203,11 @@ const Memory = ({ username, socket }) => {
                     overflow: 'hidden', // Ensures any overflow is clipped
                     background: 'radial-gradient(circle, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0))'
                 }}>
-                    <CytoscapeComponent elements={elements} style={{
+                    <CytoscapeComponent 
+                    elements={elements}
+                    userPanningEnabled={false}
+                    autolock={true} 
+                    style={{
                         position: "absolute", width: "100%", height: "100%", top: "50%", left: "50%", transform: 'translate(-50%, -50%)'
                     }} layout={
                         {
@@ -206,6 +238,14 @@ const Memory = ({ username, socket }) => {
                                 }
                             },
                         ]}
+                        cy={(cy) => {
+                            cy.on('tap', 'node', (event) => {
+                                const nodeId = event.target.id();
+                                console.log('Node tapped:', nodeId);
+                                
+                            });
+                        }}
+
                     />
                 </div>
             </div>

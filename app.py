@@ -5,8 +5,8 @@ import datetime
 # from backend.services.memory_service import MemoryService
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://localhost:3006"}})
-socketio = SocketIO(app, cors_allowed_origins='*')
+CORS(app)
+socketio = SocketIO(app, cors_allowed_origins='http://127.0.0.1')
 
 @app.route('/')
 def index():
@@ -18,6 +18,7 @@ def handle_message(timestamp, username, memory):
     dt = datetime.datetime.fromtimestamp(tstamp)
     
     print("at " + dt.strftime('%Y-%m-%d %H:%M:%S') + " " + username + " gained memory '"+memory + "'")
+
     # process_memory -> emotions = Dict[str, float], neighbours = Dict[neighbour_id = str, weight = float]
     # memory_service = MemoryService()
     # emotions, neighbours = memory_service.process_memory(memory, timestamp)
