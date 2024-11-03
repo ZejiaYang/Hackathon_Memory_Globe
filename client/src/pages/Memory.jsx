@@ -26,7 +26,7 @@ const Memory = ({username, socket}) => {
         }]);
 
         console.log("Submitting memory: %s", memory);
-        socket.emit("memory submit", username, memory);
+        socket.emit("memory submit", Date.now(), username, memory);
     };
 
     useEffect(() => {
@@ -98,7 +98,7 @@ const Memory = ({username, socket}) => {
                     position: "absolute", width: "40%", height: "75%", top: "200px", left: "55%"
                 }} layout={
                     {
-                        name: 'circle'
+                        name: 'random'
                     }
                     }
             stylesheet={[
