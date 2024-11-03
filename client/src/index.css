@@ -22,6 +22,13 @@ code {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Lazyhand';
+  src: url('./fonts/lazyhand.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .wobble:hover {
   /* Start the shake animation and make the animation last for 0.5 seconds */
   animation: wobble 0.5s;

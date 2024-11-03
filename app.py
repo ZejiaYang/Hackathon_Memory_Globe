@@ -7,7 +7,11 @@ from backend.services.feedback_service import FeedbackService
 
 app = Flask(__name__)
 CORS(app)
+<<<<<<< HEAD
 socketio = SocketIO(app, cors_allowed_origins='*')
+=======
+socketio = SocketIO(app, cors_allowed_origins='http://127.0.0.1')
+>>>>>>> 05f80c4ac4c917786358a983b651e71e60c0528b
 
 @app.route('/')
 def index():
@@ -15,6 +19,7 @@ def index():
 
 @socketio.on("memory submit")
 def handle_message(timestamp, username, memory):
+<<<<<<< HEAD
     tstamp = timestamp / 10e3
     #print("at " + str(tstamp) + " " + username + " gained memory '"+memory + "'")
     service = MemoryService()
@@ -26,6 +31,18 @@ def handle_message(timestamp, username, memory):
     feedback = FeedbackService()
     responses = feedback.get_feedback(memory, neighbour_history, emotion)
     socketio.emit('character speech', responses)
+=======
+    tstamp = timestamp / 1e3
+    dt = datetime.datetime.fromtimestamp(tstamp)
+    
+    print("at " + dt.strftime('%Y-%m-%d %H:%M:%S') + " " + username + " gained memory '"+memory + "'")
+
+    # process_memory -> emotions = Dict[str, float], neighbours = Dict[neighbour_id = str, weight = float]
+    # memory_service = MemoryService()
+    # emotions, neighbours = memory_service.process_memory(memory, timestamp)
+    # print(emotions, neighbours)
+
+>>>>>>> 05f80c4ac4c917786358a983b651e71e60c0528b
 
 
 if __name__ == '__main__':
