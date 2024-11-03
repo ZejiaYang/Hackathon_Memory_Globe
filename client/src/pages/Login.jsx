@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from '../components/Header';
+import Logo from '../components/LogoStraight';
 import Characters from '../assets/colourful.jpg';
 
 
@@ -25,7 +25,7 @@ const Login = ({setUname, socket}) => {
         }
         `}</style>
         <div className="login-container">
-            <Header />
+            <Logo />
 
             {/* <img src={Characters} alt="Characters" style={{ height: '75vh', paddingLeft: '160px' , paddingTop:'30px', float: 'left'}} /> */}
 

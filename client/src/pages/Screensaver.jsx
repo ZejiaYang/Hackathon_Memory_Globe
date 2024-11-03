@@ -1,6 +1,6 @@
 import React, { useState , useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from '../components/Header';
+import LogoHeader from '../components/LogoHeader';
 
 
 
@@ -37,8 +37,8 @@ const Login = () => {
         `}</style>
         
         <div>
-            <Header />
-            <h1 style={{position: "absolute", color:'white', textAlign: 'right', fontFamily: 'Dimitri', fontSize:'115px', left:'50%', top:'10%', transform: 'rotate(18deg)', textShadow: '4px 4px 10px rgba(0, 0, 0, 0.7)' }}>Memory Globe</h1>
+            <LogoHeader />
+           
             <ClickAnywhere />
         </div>
           

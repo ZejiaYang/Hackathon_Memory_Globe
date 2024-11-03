@@ -22,7 +22,7 @@ code {
   font-style: normal;
 }
 
-img:hover {
+.wobble:hover {
   /* Start the shake animation and make the animation last for 0.5 seconds */
   animation: wobble 0.5s;
 
@@ -47,11 +47,11 @@ img:hover {
 .emotionspeech {
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: black;
-  font-size: 30pt;
-  background-color: white;
+  font-size: 3vh;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
   padding: 10pt;
   padding-left: 10pt;
   padding-right: 10pt;
   border-radius: 20pt;
-  max-width: 30%;
+  max-width: 60%;
 }
