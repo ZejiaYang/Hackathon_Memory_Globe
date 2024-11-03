@@ -3,6 +3,7 @@ import Login from './pages/Login.jsx';    // Import your Login component
 import Memory from './pages/Memory.jsx';  // Import your Memory component
 import Screensaver from './pages/Screensaver.jsx';  // Import your Screensaver component
 import { useState } from 'react';
+import React from 'react';
 
 
 import { io } from 'socket.io-client';
