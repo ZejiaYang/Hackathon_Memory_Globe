@@ -19,24 +19,11 @@ const Memory = ({ username, socket }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        var theta = Math.random() * 2 * Math.PI;
-
-        var r = Math.random() * 400;
-
-        setElements(elements => [...elements, {
-            data: {
-                id: elements.length+1,
-                label: 'node 100',
-                grad: "#FFFFFF #FFFFFF",
-            },
-            position: {
-                x: 375+r*Math.cos(theta),
-                y: 375+r*Math.sin(theta)
-            }
-        }]);
+        setMemory('');
 
         console.log("Submitting memory: %s", memory);
         console.log(socket.emit("memory submit", Date.now(), username, memory));
+        setSp({});
     };
 
     useEffect(() => {
@@ -48,6 +35,22 @@ const Memory = ({ username, socket }) => {
             console.log(neighbour_ids);
             console.log("Neighbour history:")
             console.log(neighbour_history)
+
+            var theta = Math.random() * 2 * Math.PI;
+
+            var r = Math.random() * 400;
+    
+            setElements(elements => [...elements, {
+                data: {
+                    id: elements.length+1,
+                    label: 'node 100',
+                    grad: "#FFFFFF #FFFFFF",
+                },
+                position: {
+                    x: 375+r*Math.cos(theta),
+                    y: 375+r*Math.sin(theta)
+                }
+            }]);
         });
 
         socket.on('character speech', (speech) => {
